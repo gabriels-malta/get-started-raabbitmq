@@ -26,14 +26,16 @@ namespace Worker
                     Console.WriteLine(" [x] Received {0}", message);
 
                     int dots = message.Split('.').Length - 1;
-                    Thread.Sleep(dots * 1000);
+                    int milliseconds = dots * 1000;
 
-                    Console.WriteLine(" [x] Done");
+                    Console.WriteLine(" [X] Will be processed for {0} milliseconds", milliseconds);
+                    Thread.Sleep(milliseconds);
+                    Console.WriteLine(" [x] Done\n     ------");
                 };
                 channel.BasicConsume("task_queue", true, consumer: consumer);
+                Console.WriteLine("Listening...");
+                Console.ReadLine();
             }
-            Console.WriteLine("Listening...");
-            Console.ReadLine();
         }
     }
 }
