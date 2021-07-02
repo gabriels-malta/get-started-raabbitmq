@@ -10,4 +10,3 @@ RabbitMQ is a lightweight message broker that supports multiple messaging protoc
 
 ## Usage
 - Execute the file 'rabbitmq-server.ps1' to start up the docker image.
-- Choose one use case, and execute the file 'showcase.ps1'
