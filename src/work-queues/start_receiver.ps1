@@ -1,0 +1,1 @@
+dotnet run -p ./Worker/Worker.csproj

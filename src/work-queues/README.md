@@ -16,6 +16,6 @@ Follow these steps to get this example running properly
 
 1. Start Docker
 2. Run file "rabbitmq-server.ps1" from the root folder
-3. Run the the project **Worker**
-4. Run the scripts "NewTask_A.ps1" and "NewTask_B.ps1" in separated _Powershell_ consoles.
-5. Check the results on the **Worker**'s project  console.
+3. Run the script **start_receiver.ps1** twice to create multiple receivers
+4. Run the script **start_producer.ps1** to start firing messages to the workers (aka receivers)
+5. Check the results on the consoles of the receivers.
