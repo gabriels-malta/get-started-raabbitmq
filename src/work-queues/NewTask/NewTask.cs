@@ -15,7 +15,7 @@ namespace NewTask
             using (var conn = factory.CreateConnection())
             using (var channel = conn.CreateModel())
             {
-                channel.QueueDeclare("task_queue", false, false, false, arguments: null);
+                channel.QueueDeclare("task_queue", true, false, false, arguments: null);
 
                 string message = GetMessage(args);
                 byte[] body = Encoding.UTF8.GetBytes(message);
